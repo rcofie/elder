@@ -38,7 +38,7 @@ function App(): JSX.Element {
     
      function sendData(data: Object) {
       return new Promise((resolve, reject) => {
-          const isSuccess = Math.random() > 0.05; // 95% chance of data sending successfully
+          const isSuccess = Math.random() > 0.01; // 99% chance of data sending successfully
           if (isSuccess && data) {
             resolve("Data sent successfully");
           } else {

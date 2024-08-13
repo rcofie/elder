@@ -3,6 +3,12 @@
   margin: 2% 23%;
 }
 
+@media only screen and (max-width: 768px) {
+  .App {
+    margin: 2% 15%;
+  }
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -68,4 +74,5 @@
 
 .questionTitles {
   font-weight: 400;
+  font-size: medium;
 }
