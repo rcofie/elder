@@ -12,6 +12,8 @@ function App(): JSX.Element {
   const [correctAnswers, setCorrectAnswers] = useState<string[]>([]);
   const [status, setStatus] = useState<string[]>([])
 
+  // fetch question data from JSON file
+
     useEffect(() => {
        fetch("./data.json")
         .then(response => {
@@ -26,12 +28,16 @@ function App(): JSX.Element {
         });
     }, []);
 
+  // update state with selected answers
+
   function handleInputChange(selectedOption: string): void {
       setSelectedAnswers(prevAnswers => [...prevAnswers, selectedOption])
     }  
 
   useEffect(() => {
   }, [selectedAnswers]);
+
+  // mock function to send the selected answers and receive the response (correct or not) for each question
 
   async function submitAnswers(e: { preventDefault: () => void; }): Promise<void>  {
     e.preventDefault();
@@ -48,13 +54,15 @@ function App(): JSX.Element {
     }
 
     try {
-      let response: any = await sendData(selectedAnswers);
-      response = correctAnswers.map((value, index) => value === selectedAnswers[index] ? "Correct" : "Incorrect");
-      setStatus(response);
-    } catch  {
-      throw new Error("Failed to receive response: Network Error")
+        let response: any = await sendData(selectedAnswers);
+        response = correctAnswers.map((value, index) => value === selectedAnswers[index] ? "Correct" : "Incorrect");
+        setStatus(response);
+    } catch {
+        throw new Error("Failed to receive response: Network Error")
     }
   }
+  
+  // question component that renders the data
 
   return (
     <div className="App">
