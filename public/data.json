@@ -1,0 +1,12 @@
+{
+ "questions":
+ {  "What is the capital of the UK?": ["Manchester", "London", "Bristol"],
+    "What year did Queen Elizabeth II die?": ["2022", "2021", "2023"],
+    "What is the highest ever recorded temperature in the UK?": ["40.2°C", "40.3°C", "40.1°C"],
+    "How many boroughs are there in London?": ["35", "32", "31"],
+    "Street artist Banksy is originally associated with which British city?" : ["Bristol", "Belfast", "Birmingham"],
+    "Should you give Rebecca this job?" : ["Yes", "No"]
+},
+"correctAnswers": ["London", "2022", "40.3°C", "32", "Bristol", "Yes"]
+}
+

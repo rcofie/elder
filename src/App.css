@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin: 2% 23%;
 }
 
 .App-logo {
@@ -35,4 +36,36 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.button {
+  margin: 2% 0%;
+  padding: 0.8% 3%;
+  font-size: 1rem;
+}
+
+.label {
+  border: 1px solid rgb(82, 82, 82);
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.status {
+  text-align: right;
+  font-weight: 500;
+  margin: 0 0.3% 0 0;
+}
+
+.questionTitles {
+  font-weight: 400;
 }
